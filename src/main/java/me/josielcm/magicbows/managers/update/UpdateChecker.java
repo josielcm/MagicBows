@@ -19,19 +19,6 @@ import org.bukkit.plugin.java.JavaPlugin;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-/**
- * A utility class to assist in checking for updates for plugins uploaded to
- * <a href="https://spigotmc.org/resources/">SpigotMC</a>. Before any members of this
- * class are accessed, {@link #init(JavaPlugin, int)} must be invoked by the plugin,
- * preferrably in its {@link JavaPlugin#onEnable()} method, though that is not a
- * requirement.
- * <p>
- * This class performs asynchronous queries to Spigot's API. If the results of
- * {@link #requestUpdateCheck()} are inconsistent with what is published on SpigotMC, it
- * may be due to the REST API cache. Results will be updated in due time.
- *
- * @author Parker Hawke - Choco
- */
 public final class UpdateChecker {
 
     /** The default version scheme for this update checker */
