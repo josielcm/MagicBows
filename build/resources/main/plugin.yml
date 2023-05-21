@@ -1,0 +1,11 @@
+name: MagicBows
+version: '1.0.0'
+main: me.josielcm.magicbows.MagicBows
+api-version: 1.16
+authors: [ josielcm ]
+description: Add custom bows with magic or something, It's unique for your server :)
+commands:
+  MagicBow:
+    description: Main Command
+    aliases:
+      - mb

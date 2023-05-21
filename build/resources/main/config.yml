@@ -1,0 +1,62 @@
+###################################################################
+# |                         MagicBows                           | #
+# |                    Created by: josielcm                     | #
+# |      Wiki: https://josielcm.gitbook.io/magicbows-wiki/      | #
+###################################################################
+#
+###########################################################
+# |              Thx for using my plugin                | #
+# |              Support: josielcm#8990                 | #
+###########################################################
+#
+#########################################################
+# |                     Resources                     | #
+#########################################################
+# Sounds: https://dev.bukkit.org/projects/justsound/pages/sound-list  (Not all the sounds in minecraft depend on the version).
+# Blocks: https://game8.co/games/Minecraft/archives/378373 (Remember is example BLUE_STAINED_GLASS_PANE).
+# Particles: 
+#
+check-updated: true
+#
+#########################################################
+# |                ActionBar Message                  | #
+#########################################################
+on-hand: "&7You have equipped the bow %bow%!"
+off-hand: "&7You have dis equipped the bow %bow%!"
+#########################################################
+# |                      Sound                        | #
+#########################################################
+sound-item-held:
+  on:
+    sound: BLOCK_NOTE_BLOCK_BANGO
+    volume: 10
+    pitch: 1
+  off:
+    sound: BLOCK_NOTE_BLOCK_BANGO
+    volume: 10
+    pitch: 1
+################################################################
+# |                      Sound General                       | #
+################################################################
+sounds: # This sound is for some errors
+  volume-general: 10
+  pitch-general: 1
+  error-message: BLOCK_ANVIL_PLACE # This sound will not only be used for error messages.
+###############################################################
+# |                   Commands Cooldown                     | #
+###############################################################
+cooldown-commands: 3
+cooldown-command-message: "&5Magic Bows &7: &7You must wait %timeleft% seconds before using this command again."
+############################################################
+# |                      Messages                        | #
+############################################################
+bow-not-found: "&5Magic Bows &7: &cBow %argument% does not exist." # This message goes hand in hand with "bows-available".
+bows-available: " &7&l| &eBows available: &6%bows%"
+bow-no-exists: "&5Magic Bows &7: &cThis bow is not in the configuration or this poorly configured."
+bows-no-configured: "&5Magic Bows &7: There are no bows configured."
+bow-does-not-exist: "&5Magic Bows &7: &cBow %argument% does not exist"
+full-inventory: "&5Magic Bows &7: &6Your inventory is full, the bow was dropped on the ground."
+bow-received: "&5Magic Bows &7: &6You received the bow &6&l%bow% &r&6in your inventory."
+no-perms-command: "&5Magic Bows &7: You do not have permission to access this command"
+error-arg: "&5Magic Bows &7: SubCommand not found."
+player-not-exist: "&5Magic Bows &7: This player does not exist."

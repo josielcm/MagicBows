@@ -1,0 +1,195 @@
+###################################################################
+# |                         MagicBows                           | #
+# |                    Created by: josielcm                     | #
+# |      Wiki: https://josielcm.gitbook.io/magicbows-wiki/      | #
+###################################################################
+#
+#########################################################
+# |                     Resources                     | #
+#########################################################
+# Sounds: https://dev.bukkit.org/projects/justsound/pages/sound-list  (Not all the sounds in minecraft depend on the version).
+# Blocks: https://game8.co/games/Minecraft/archives/378373 (Remember is example: BLUE_STAINED_GLASS_PANE).
+# Particles: https://minecraft.fandom.com/wiki/Particles
+#
+#########################################################
+# |                   Example Bows                    | #
+#########################################################
+bows:
+  # Item id for commands, handling data, etc.
+  basic:
+    # Name that will be displayed to the item
+    display-name: "&9Basic &6Bow"
+
+    # Add the enchantments you want.
+    enchantments:
+      ARROW_DAMAGE: 1 # Enchantment and enchantment level
+      ARROW_KNOCKBACK: 1
+
+    lore: # Add descriptions for the bow.
+      - "&7Made by josielcm#8990"
+
+  #########################################################
+  # |                   Teleport Bow                    | #
+  #########################################################
+  teleport:
+    display-name: "&5Teleport &6Bow"
+    enchantments:
+      ARROW_DAMAGE: 1
+
+    # If it is false this option will be disabled.
+    #With this option you can teleport. more information on the wiki:https://josielcm.gitbook.io/magicbows-wiki/
+    teleport: true
+
+    # Set unbreakable
+    unbreakable: true
+    # Hide if it is true the option unbreakable
+    hide-unbreakable: true
+
+    # Disable the fall damage, def: false
+    fall-damage: false
+    # Cooldown
+    # The %timeleft% variable is only valid for cooldowns messages
+    use-cooldown: true
+    cooldown: 5
+    cooldown-message: "&5Magic Bows &7: &7You must wait &6%timeleft% &7 before using this bow again."
+
+    lore:
+      - "&bUse this bow for move more fast"
+      - ""
+      - "&6(Made by MagicBows)"
+
+    # Add custom sounds when using the bow.
+    sound:
+      sound: ENTITY_ENDERMAN_TELEPORT # The name of the sound you want to add to the bow.
+      pitch: 1 # Choose the Pitch number or leave it default if you wish, deafult 1
+      volume: 10 # Set the volume you want for the bow (for sound).
+
+     # Add particles when using the bow.
+    particles:
+      type: PORTAL # Set the type or name of the particle you want.
+      amount: 50 # Choose the amount of particles.
+
+  #########################################################
+  # |                  Explosion Bow                    | #
+  #########################################################
+  explosion:
+    display-name: "&4&lEXPLOSION &fBOW"
+    lore:
+      - "&7Generate explosion!"
+      - ""
+      - "&6&lKBOOM"
+    enchantments:
+      ARROW_INFINITY: 1
+    hide-enchant: true
+
+    # Generate explosion
+    # Def: false
+    explosion: true
+    # Blast radius, be considered as it may cause lag, and it is advisable to add a long cooldown if desired.
+    explosion-radius: 5
+
+    # Add custom permission for use this bow
+    permissions:
+      enable: true
+      perm: "magicbows.explosionbow" # Write your own permission
+      message: "&5Magic Bows &7: You do not have permission to use this bow."
+    # Cooldown
+    use-cooldown: true
+    cooldown: 5
+    cooldown-message: "&5Magic Bows &7: &7You must wait &6%timeleft% &7before using this bow again."
+    sound:
+      sound: ENTITY_GENERIC_EXPLODE
+      volume: 10
+      pitch: 1
+    particles:
+      type: EXPLOSION_LARGE
+      amount: 5
+
+  #########################################################
+  # |                Generate blocks Bows               | #
+  #########################################################
+  magic-sphere-blocks:
+    display-name: "&3&lSpawn SPHERE &fBow"
+    lore:
+      - "&fGenerate blocks!"
+      - ""
+      - "&7Type: &fSPHERE"
+      - "&7Material: &fWhite Stained Glass"
+      - ""
+      - "&3Pushhhh"
+    enchantments:
+      ARROW_INFINITY: 1
+    hide-enchant: true
+
+    # Generate blocks parameters
+    block-generation:
+      enable: true
+      type: SPHERE
+      radius: 7.0
+      material: WHITE_STAINED_GLASS
+      affect-blocks: false # This option refers to chests, doors, fences, slabs and trapdoors. I recommend leaving it on false to avoid bugs or that when regenerating the chests the items are lost.
+      regenerate-blocks: true
+      cooldown-regenerate: 5 # Time in seconds
+      particle:
+        type: PORTAL
+        amount: 8
+
+    # Add custom permission for use this bow
+    permissions:
+      enable: true
+      perm: "magicbows.generateblocks" # Write your own permission
+      message: "&5Magic Bows &7: You do not have permission to use this bow."
+    # Cooldown
+    use-cooldown: true
+    cooldown: 5
+    cooldown-message: "&5Magic Bows &7: &7You must wait &6%timeleft% &7before using this bow again."
+    sound:
+      sound: BLOCK_BAMBOO_STEP
+      volume: 10
+      pitch: 1
+    particles:
+      type: SOUL_FIRE_FLAME
+      amount: 5
+  magic-pyramid-blocks:
+    display-name: "&3&lSpawn PYRAMID &fBow"
+    lore:
+      - "&fGenerate blocks!"
+      - ""
+      - "&7Type: &fPYRAMID"
+      - "&7Material: &fSandStone"
+      - ""
+      - "&3Pushhhh"
+    enchantments:
+      ARROW_INFINITY: 1
+    hide-enchant: true
+
+    # Generate blocks parameters
+    block-generation:
+      enable: true
+      type: PYRAMID
+      radius: 5
+      height: 5
+      material: SANDSTONE
+      affect-blocks: false # This option refers to chests, doors, fences, slabs and trapdoors. I recommend leaving it on false to avoid bugs or that when regenerating the chests the items are lost.
+      regenerate-blocks: true
+      cooldown-regenerate: 5 # Time in seconds
+      particle:
+        type: PORTAL
+        amount: 8
+
+    # Add custom permission for use this bow
+    permissions:
+      enable: true
+      perm: "magicbows.generateblocks" # Write your own permission
+      message: "&5Magic Bows &7: You do not have permission to use this bow."
+    # Cooldown
+    use-cooldown: true
+    cooldown: 5
+    cooldown-message: "&5Magic Bows &7: &7You must wait &6%timeleft% &7before using this bow again."
+    sound:
+      sound: BLOCK_BAMBOO_STEP
+      volume: 10
+      pitch: 1
+    particles:
+      type: SOUL_FIRE_FLAME
+      amount: 5
